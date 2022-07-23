@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/frontend', function () {
-    return view('layouts.template');
+    return view('frontend.home');
 });
 
 Route::get('/backend', function () {
