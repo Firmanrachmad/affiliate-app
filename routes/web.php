@@ -24,3 +24,7 @@ Route::get('/frontend', function () {
 Route::get('/backend', function () {
     return view('layouts.template1');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
