@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Hexashop Ecommerce HTML CSS Template</title>
+    <title>FahmiReza Affiliate Marketing</title>
 
 
     <!-- Additional CSS Files -->
@@ -62,15 +62,19 @@ https://templatemo.com/tm-571-hexashop
                             <li class="scroll-to-section"><a href="#women">Women's</a></li>
                             <li class="scroll-to-section"><a href="#kids">Kid's</a></li>
                             <li class="submenu">
-                                <a href="javascript:;">Pages</a>
+                                <a href="javascript:;">Users</a>
                                 <ul>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="products.html">Products</a></li>
-                                    <li><a href="single-product.html">Single Product</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="about.html">My Profile</a></li>
+                                    <li><a href="products.html">My Wishlist</a></li>
+                                    <li><a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Logout</a></li>
                                 </ul>
                             </li>
-                            <li class="submenu">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                            </form> 
+                            <!-- <li class="submenu">
                                 <a href="javascript:;">Features</a>
                                 <ul>
                                     <li><a href="#">Features Page 1</a></li>
@@ -78,8 +82,8 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a href="#">Features Page 3</a></li>
                                     <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
                                 </ul>
-                            </li>
-                            <li class="scroll-to-section"><a href="#explore">Explore</a></li>
+                            </li> -->
+                            <li class="scroll-to-section"><a href="#">Sign In</a></li>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
