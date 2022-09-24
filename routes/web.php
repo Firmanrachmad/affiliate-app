@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +25,11 @@ Route::get('/frontend', function () {
 });
 
 Route::get('/backend', function () {
-    return view('layouts.template1');
+    return view('backend.dashboard');
 });
+
+Route::get('/manageuser', [UsersController::class, 'index']);
+Route::get('/detailuser', [UsersController::class, 'index_detail']);
 
 Auth::routes();
 
